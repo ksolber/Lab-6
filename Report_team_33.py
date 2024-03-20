@@ -18,20 +18,21 @@ def menu():
     print("Menu\n-------------\n1. Encode\n2. Decode\n3. Quit")
 
 
-cnt = True
-# while cnt is true will run the option menu until quit is selected
-while cnt == True:
-    menu()
-    print()
-    option = int(input('Please enter an option: '))
-    if option == 1:
-        password = input("Please enter your password to encode: ")
-        password = encoder(password)
-        print("Your password has been encoded and stored!")
+if __name__ == '__main__':
+    cnt = True
+    # while cnt is true will run the option menu until quit is selected
+    while cnt == True:
+        menu()
         print()
-        continue
-    elif option == 3:
-        cnt = False
+        option = int(input('Please enter an option: '))
+        if option == 1:
+            password = input("Please enter your password to encode: ")
+            password = encoder(password)
+            print("Your password has been encoded and stored!")
+            print()
+            continue
+        elif option == 3:
+            cnt = False
 
 
 
