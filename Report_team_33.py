@@ -1,4 +1,4 @@
-def encoder (password):
+def encode (password):
     list = []
     # creates a list of the characters in the password
     for i, item in enumerate(password):
@@ -14,6 +14,10 @@ def encoder (password):
     return encoded_password
 
 
+def decode(password):
+    pass
+
+
 def menu():
     print("Menu\n-------------\n1. Encode\n2. Decode\n3. Quit")
 
@@ -21,18 +25,22 @@ def menu():
 if __name__ == '__main__':
     cnt = True
     # while cnt is true will run the option menu until quit is selected
-    while cnt == True:
+    while True:
         menu()
         print()
         option = int(input('Please enter an option: '))
         if option == 1:
             password = input("Please enter your password to encode: ")
-            password = encoder(password)
+            password = encode(password)
             print("Your password has been encoded and stored!")
             print()
             continue
+        elif option == 2:
+            decoded_password = decode(password)
+            print(f"The encoded password is {password}, and the original password is {decoded_password}.")
+            print()
         elif option == 3:
-            cnt = False
+            break
 
 
 
