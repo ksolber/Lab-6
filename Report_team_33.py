@@ -19,7 +19,7 @@ def menu():
 
 
 cnt = True
-# while cnt is true will run the option menu until option 0 is selected
+# while cnt is true will run the option menu until quit is selected
 while cnt == True:
     menu()
     print()
