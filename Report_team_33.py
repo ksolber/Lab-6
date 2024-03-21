@@ -14,8 +14,17 @@ def encode (password):
     return encoded_password
 
 
-def decode(password):
-    pass
+def decode(encoded_password):
+    list = []
+    for i, item in enumerate(encoded_password):
+        list.append(encoded_password[i])
+    for i, item in enumerate(list):
+        list[i] = int(item)
+        list[i] -= 3
+    decoded_password = ''
+    for item in list:
+        decoded_password += str(item)
+    return decoded_password
 
 
 def menu():
